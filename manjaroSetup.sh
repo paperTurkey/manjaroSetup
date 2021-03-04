@@ -193,6 +193,486 @@ function installgparted {
   read input
 }
 
+# Install Emacs
+function installemacs {
+  echo
+  echo -e " Currently installing ${b}Emacs${enda}"
+  echo -e "${bu}GNU Emacs is an extensible, customizable text editor and more!"
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}Emacs${endc}"
+  pacman -S --noconfirm emacs
+  echo && echo -e "${b}Emacs${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install GEdit
+function installgedit {
+  echo
+  echo -e " Currently installing ${b}GEdit${enda}"
+  echo -e "${bu}GEdit is a text editor for the GNOME desktop environment, Mac OSX and Microsoft Windows."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}GEdit${endc}"
+  pacman -S --noconfirm gedit
+  echo && echo -e "${b}GEdit${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install Geany
+function installgeany {
+  echo
+  echo -e " Currently installing ${b}Geany${enda}"
+  echo -e "${bu}Geany is a text editor using the GTK2 toolkit with basic features of an integrated development environment."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}Geany${endc}"
+  pacman -S --noconfirm geany
+  echo && echo -e "${b}Geany${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install FileZilla
+function installfilez {
+  echo
+  echo -e " Currently installing ${b}FileZilla${enda}"
+  echo -e "${bu}FileZilla is a free, open source FTP client."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}FileZilla${endc}"
+  pacman -S --noconfirm filezilla
+  echo && echo -e "${b}FileZilla${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install gFTP
+function installgftp {
+  echo
+  echo -e " Currently installing ${b}gFTP${enda}"
+  echo -e "${bu}gFTP is a free/open source multithreaded FTP client."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}gFTP${endc}"
+  pacman -S --noconfirm gftp
+  echo && echo -e "${b}gFTP${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install Transmission
+function installtransmission {
+  echo
+  echo -e " Currently installing ${b}Transmission${enda}"
+  echo -e "${bu}Transmission is designed for easy, poweful use."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}Transmission${endc}"
+  pacman -S --noconfirm transmission-qt
+  echo && echo -e "${b}Transmission${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install Ark
+function installark {
+  echo
+  echo -e " Currently installing ${b}Ark${enda}"
+  echo -e "${bu}Ark is a program for managing various archive formats (RAR, ZIP, ...) within the KDE environment."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}Ark${endc}"
+  pacman -S --noconfirm ark
+  echo && echo -e "${b}Ark${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install fileroller
+function installfileroller {
+  echo
+  echo -e " Currently installing ${b}File-Roller${enda}"
+  echo -e "${bu}File-Roller is an archive manager of the GNOME desktop environment."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}File-Roller${endc}"
+  pacman -S --noconfirm file-roller
+  echo && echo -e "${b}File-Roller${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install Zip/Unzip
+function installzipunzip {
+  echo
+  echo -e " Currently installing ${b}Zip/Unzip${enda}"
+  echo -e "${bu}Zip/Unzip is a archive tool commonly found on MS-DOS systems."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}Zip/Unzip${endc}"
+  pacman -S --noconfirm unzip
+  echo && echo -e "${b}Zip/Unzip${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install Rar/Unrar
+function installrarunrar {
+  echo
+  echo -e " Currently installing ${b}Rar/Unrar${enda}"
+  echo -e "${bu}Rar/Unrar is a archival compression tool for the terminal."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}Rar/Unrar${endc}"
+  pacman -S --noconfirm rar unrar
+  echo && echo -e "${b}Rar/Unrar${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install Chromium
+function installchromium {
+  echo
+  echo -e " Currently installing ${b}Chromium${enda}"
+  echo -e "${bu}Chromium is an open-source browser project."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}Chromium${endc}"
+  pacman -S --noconfirm chromium
+  echo && echo -e "${b}Chromium${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install Google Chrome
+function installchrome {
+  echo
+  echo -e " Currently installing ${b}Google Chrome${enda}"
+  echo -e "${bu}Chrome is a freeware web browser developed by Google."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}Chrome${endc}"
+  yay -S google-chrome
+  echo && echo -e "${b}${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install Youtube Downloader
+function installytbdwn {
+  echo
+  echo -e " Currently installing ${b}Youtube Downloader${enda}"
+  echo -e "${bu}Simple Youtube Video Downloader is exactly what it says it is."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}Youtube Downloader${endc}"
+  pacman -S --noconfirm youtube-dl
+  echo && echo -e "${b}Youtube Downloader${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install Connman
+function installconnman {
+  echo
+  echo -e " Currently installing ${b}Connman${enda}"
+  echo -e "${bu}Connman is a daemon for managing internet connections within embedded devices running the Linux operating system."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}Connman${endc}"
+  pacman -S --noconfirm connman
+  echo && echo -e "${b}Connman${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install Skype
+function installskype {
+  echo
+  echo -e " Currently installing ${b}Skype${enda}"
+  echo -e "${bu}Skype is a freemium VOIP service and instant messaging client."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}Skype${endc}"
+  yay -S skype
+  echo && echo -e "${b}Skype${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install Teamviewer
+function installteamviewer {
+  echo
+  echo -e " Currently installing ${b}Teamviewer${enda}"
+  echo -e "${bu}Teamviewer is a proprietary computer software package for remote control, desktop sharing, online meeting, web conferencing and file transfer between computers."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}Teamviewer${endc}"
+  yay -S teamviewer
+  echo && echo -e "${b}Teamviewer${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install Terminator
+function installterminator {
+  echo
+  echo -e " Currently installing ${b}Terminator${enda}"
+  echo -e "${bu}Terminator is a useful tool for arranging terminals."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}Terminator${endc}"
+  pacman -S --noconfirm terminator
+  echo && echo -e "${b}Terminator${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install Gnome Tweak Tool
+function installgnometweaktool {
+  echo
+  echo -e " Currently installing ${b}Gnome Tweak Tool${enda}"
+  echo -e "${bu}Gnome Tweak Tool is a tool to customize advanced GNOME 3 options."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}Gnome Tweak Tool${endc}"
+  pacman -S --noconfirm gnome-tweak-tool
+  echo && echo -e "${b}Gnome Tweak Tool${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install netctl
+function installnetctlr {
+  echo
+  echo -e " Currently installing ${b}netctl${enda}"
+  echo -e "${bu}netctl is a simple and robust tool to manage network connections via profiles."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}netctl${endc}"
+  pacman -S --noconfirm netctl
+  echo && echo -e "${b}${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install NetworkManager
+function installnetworkmanager {
+  echo
+  echo -e " Currently installing ${b}NetworkManager${enda}"
+  echo -e "${bu}NetworkManager is a tool that provides wired, wireless, mobile boradband and OpenVPN detection with configuration and automatic connection."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}NetworkManager${endc}"
+  pacman -S --noconfirm networkmanager
+  echo && echo -e "${b}NetworkManager${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install systemd-networkd
+function installsystemnet {
+  echo
+  echo -e " Currently installing ${b}systemd-networkd${enda}"
+  echo -e "${bu}systemd-networkd is a native daemon that manages network configuration."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}systemd-networkd${endc}"
+  pacman -S --noconfirm systemd
+  echo && echo -e "${b}systemd-networkd${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install Wicd
+function installwicd {
+  echo
+  echo -e " Currently installing ${b}Wicd${enda}"
+  echo -e "${bu}Wicd is a wireless and wired connection manager."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}Wicd${endc}"
+  pacman -S --noconfirm wicd
+  echo && echo -e "${b}Wicd${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install OpenConnect
+function installopenconnect {
+  echo
+  echo -e " Currently installing ${b}OpenConnect${enda}"
+  echo -e "${bu}OpenConnect is a client for Cisco's AnyConnect SSL VPN."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}OpenConnect${endc}"
+  pacman -S --noconfirm openconnect
+  echo && echo -e "${b}OpenConnect${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install PPTP Client
+function installpptpclient {
+  echo
+  echo -e " Currently installing ${b}PPTP Client${enda}"
+  echo -e "${bu}PPTP Client is a program implementing the Microsoft PPTP protocol."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}PPTP Client${endc}"
+  pacman -S --noconfirm pptpclient
+  echo && echo -e "${b}PPTP Client${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install Firefox
+function installfirefox {
+  echo
+  echo -e " Currently installing ${b}Firefox${enda}"
+  echo -e "${bu}Firefox is a free and open-source web browser developed by the Mozilla Foundation."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}Firefox${endc}"
+  pacman -S --noconfirm firefox
+  echo && echo -e "${b}${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install Youtube Downloader GUI
+function installytgui {
+  echo
+  echo -e " Currently installing ${b}Youtube Downloader (GUI)${enda}"
+  echo -e "${bu}Youtube Downloader (GUI) is a cross platform front-end GUI of the popular youtube-dl."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}Youtube Downloader (GUI)${endc}"
+  yay -S youtube-dl-gui-git
+  echo && echo -e "${b}Youtube Downloader (GUI)${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install VLC
+function installvlc {
+  echo
+  echo -e " Currently installing ${b}VLC${enda}"
+  echo -e "${bu}VLC is a free and open source cross-platform multimedia player and framework that plays most multimedia files."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}VLC${endc}"
+  pacman -S --noconfirm vlc
+  echo && echo -e "${b}VLC${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install Gwget
+function installgwget {
+  echo
+  echo -e " Currently installing ${b}Gwget${enda}"
+  echo -e "${bu}Gwget is a download manager for the Gnome Desktop."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}Gwget${endc}"
+  pacman -S --noconfirm gwget
+  echo && echo -e "${b}Gwget${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install kget
+function installkget {
+  echo
+  echo -e " Currently installing ${b}KGet${enda}"
+  echo -e "${bu}KGet is a free download manager for KDE."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}KGet${endc}"
+  pacman -S --noconfirm kdenetwork-kget
+  echo && echo -e "${b}KGet${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install Uget
+function installuget {
+  echo
+  echo -e " Currently installing ${b}uGet${enda}"
+  echo -e "${bu}uGet is a powerful download manager application with a large inventory of features."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}uGet${endc}"
+  pacman -S --noconfirm uget
+  echo && echo -e "${b}uGet${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install curlftpfs
+function installcurlftpfs {
+  echo
+  echo -e " Currently installing ${b}Curl ftpFS${enda}"
+  echo -e "${bu}Curl FtpFS is a filesystem for accessing FTP hosts based on FUSE and libcurl."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}Curl ftpFS${endc}"
+  pacman -S --noconfirm curlftpfs
+  echo && echo -e "${b}Curl ftpFS${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install qBittorrent
+function installqbittorrent {
+  echo
+  echo -e " Currently installing ${b}qBittorrent${enda}"
+  echo -e "${bu}qBittorrent is a cross-platform client for the BitTorrent protocol."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}qBittorrent${endc}"
+  pacman -S --noconfirm qbittorrent qbittorrent-nox
+  echo && echo -e "${b}qBittorrent${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
 ##########################################################
 #                      Third Component                   #
 ##########################################################
