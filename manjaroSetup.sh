@@ -36,7 +36,7 @@ if [ ! -e "/usr/bin/ManjaroSetup" ];then
     echo -en "\e[32m[-] : Script is not installed. Do you want to install it ? (Y/N) !\e[0m"
     read install
     if [[ $install = Y || $install = y ]] ; then
-        wget https://github.com/paperTurkey/manjaroSetup/blob/master/manjaroSetup.sh -O /usr/bin/ManjaroSetup
+        wget https://raw.githubusercontent.com/paperTurkey/manjaroSetup/master/manjaroSetup.sh -O /usr/bin/ManjaroSetup
         chmod +x /usr/bin/ManjaroSetup
         echo "Manjaro Setup should now be installed. Launching it !"
         sleep 1
