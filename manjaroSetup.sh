@@ -113,7 +113,9 @@ function checkyay {
     echo [x]::[warning]:this script require Yay ;
     echo ""
     echo [!]::[please wait]: Installing Yay ..  ;
-    git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+    sudo pacman -Su binutils make gcc pkg-config fakeroot --noconfirm
+    echo ""
+    git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm
     echo ""
   fi
 sleep 1
@@ -321,7 +323,7 @@ function manjarosetupexit {
   showlogo && echo -e " Thanks for using ${b} ManjaroSetup${enda}."
   echo
   sleep 1
-  exit  
+  exit
 }
 
 done
