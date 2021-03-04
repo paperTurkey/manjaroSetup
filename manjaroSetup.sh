@@ -118,9 +118,9 @@ function checkyay {
     sleep 1
 }
 
-functon checkgit {
+function checkgit {
   which git > /dev/null 2>&1
-  if [ "$?" -eq "0"]; then
+  if [ "$?" -eq "0" ]; then
     echo [✔]::[Git]: installation found!;
   else
     echo [x]::[warning]: this script requires Git ;
@@ -134,17 +134,17 @@ functon checkgit {
 
 function checkwget {
   which wget > /dev/null 2>&1
-  if [ "$?" -eq "0"]; then
+	if [ "$?" -eq "0" ]; then
     echo [✔]::[wget]: installation found!;
   else
-    echo [x]::[warning]: this script requires wget ;
+    echo [x]::[warning]:this script require wget ;
     echo ""
-    echo [!]::[please wait]: Installing wget... ;
-    pacman -S wget --noconfirm
+    echo [!]::[please wait]: Installing Wget ;
+    pacman -S --noconfirm wget
     echosleep 2
     echo ""
   fi
-  sleep 1
+sleep 1
 }
 
 # Script Initiation
