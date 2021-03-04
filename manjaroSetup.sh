@@ -62,6 +62,7 @@ function archicheck {
     echo -e "\e[32m[-] multilab is already Enabled !\e[0m"
 	   #sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
   fi
+}
 
 # Manjaro Setup Logo
 function showlogo {
