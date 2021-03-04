@@ -257,7 +257,7 @@ function showvpn {
 
 # Menu for Network Managers
 
-# Loop to Show Menu Until Exit
+# Infinite Loop to Show Menu Until Exit
 while :
 do
   showlogo
@@ -314,6 +314,14 @@ function showabout {
   #  -- https://github.com/SofianeHamlaoui/ArchI0          #
   ##########################################################
   "
+}
+
+# Exit ManjaroSetup
+function manjarosetupexit {
+  showlogo && echo -e " Thanks for using ${b} ManjaroSetup${enda}."
+  echo
+  sleep 1
+  exit  
 }
 
 done
