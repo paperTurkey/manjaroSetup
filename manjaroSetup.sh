@@ -106,34 +106,35 @@ function initpacmanupd {
 
 function checkyay {
   which yay > /dev/null 2>&1
-    if [ "$?" -eq "0" ]; then
-      echo [✔]::[Yay]: installation found!;
-    else
-      echo [x]::[warning]: this script requires Yay ;
-      echo ""
-      echo [!]::[please wait]: Installing Yay... ;
-      git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
-      echo ""
-    fi
-    sleep 1
+  if [ "$?" -eq "0" ]; then
+    echo [✔]::[Yay]: installation found!;
+  else
+    echo [x]::[warning]:this script require Yay ;
+    echo ""
+    echo [!]::[please wait]: Installing Yay ..  ;
+    git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+    echo ""
+  fi
+sleep 1
 }
 
+
 function checkgit {
-  which git > /dev/null 2>&1
-  if [ "$?" -eq "0" ]; then
-    echo [✔]::[Git]: installation found!;
+	which git > /dev/null 2>&1
+	if [ "$?" -eq "0" ]; then
+	  echo [✔]::[Git]: installation found!;
   else
-    echo [x]::[warning]: this script requires Git ;
+    echo [x]::[warning]:this script require Git ;
     echo ""
-    echo [!]::[please wait]: Installing Git... ;
+    echo [!]::[please wait]: Installing Git ..  ;
     pacman -S git --noconfirm
     echo ""
   fi
-  sleep 1
+sleep 1
 }
 
 function checkwget {
-  which wget > /dev/null 2>&1
+	which wget > /dev/null 2>&1
 	if [ "$?" -eq "0" ]; then
     echo [✔]::[wget]: installation found!;
   else
