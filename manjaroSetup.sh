@@ -988,7 +988,7 @@ function installlibreoffice {
 
 # Install HardInfo
 function installhardinfo {
-  echo
+  echoBT
   echo -e " Currently installing ${b}HardInfo${enda}"
   echo -e "${bu}HardInfo is an app that provides information about your system hardware."
   echo && echo -en " ${y}Press enter to continue...${endc}"
@@ -1084,7 +1084,9 @@ function showftptorr {
     5) installtransmission ;;
     q) sleep 1 ;;
     *) echo " \"$option\" Is Not a Valid Option"; sleep 1; downmanage ;;
+  esac
 }
+
 # Menu for Chat Applications
 
 # Menu for Image Editors
