@@ -1065,6 +1065,7 @@ function showtext {
     5) installkate ;;
     q) sleep 1 ;;
     *) echo " \"$option\" Is Not a Valid Option"; sleep 1; downmanage ;;
+  esac
 }
 
 # Menu for FTP/Torrent Applications
