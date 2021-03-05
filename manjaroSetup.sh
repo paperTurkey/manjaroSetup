@@ -1138,6 +1138,7 @@ function netmanage {
     6) installwicd ;;
     q) sleep 1 ;;
     *) echo " \"$option\" Is Not a Valid Option"; sleep 1; downmanage ;;
+  esac
 }
 
 # Menu for VPN Clients
@@ -1179,6 +1180,7 @@ function showchat {
     4) installgeany ;;
     q) sleep 1 ;;
     *) echo " \"$option\" Is Not a Valid Option"; sleep 1; downmanage ;;
+  esac
 }
 # Menu for Archive Handlers
 function showarch {
@@ -1200,6 +1202,7 @@ function showarch {
     4) installrarunrar ;;
     q) sleep 1 ;;
     *) echo " \"$option\" Is Not a Valid Option"; sleep 1; downmanage ;;
+  esac
 }
 
 # Menu for Audio Applications
@@ -1216,6 +1219,7 @@ function showaudio {
     1) installvlc ;;
     q) sleep 1 ;;
     *) echo " \"$option\" Is Not a Valid Option"; sleep 1; downmanage ;;
+  esac
 }
 
 # Menu for Rando Applications
@@ -1258,6 +1262,7 @@ function showothapps {
     14) installokular ;;
     q) sleep 1 ;;
     *) echo " \"$option\" Is Not a Valid Option"; sleep 1; downmanage ;;
+  esac
 }
 
 # Menu for IDEs
@@ -1290,6 +1295,7 @@ function showdevapps {
     9) installatom ;;
     q) sleep 1 ;;
     *) echo " \"$option\" Is Not a Valid Option"; sleep 1; downmanage ;;
+  esac
 }
 
 # Menu for Web Applications
@@ -1314,6 +1320,7 @@ function showwebapps {
     5) installytgui ;;
     q) sleep 1 ;;
     *) echo " \"$option\" Is Not a Valid Option"; sleep 1; downmanage ;;
+  esac
 }
 
 # Menu for Dotfiles
