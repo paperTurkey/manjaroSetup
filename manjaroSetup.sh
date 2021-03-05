@@ -1108,25 +1108,54 @@ function showftptorr {
 # Menu for Network Managers
 
 # Infinite Loop to Show Menu Until Exit
+
 while :
 do
-  showlogo
-  echo -e " ${b}[ROOT Menu ]${enda}"
-  echo -e "Make a choice:
-            1. Download Managers
-            2. VPN Clients
-            3. FTP Torrent Applications
-            ---------------------------
-            a. About ManjaroSetup
-            q. Leave ManjaroSetup"
-  echo
-  echo -en " Choose an option: "
-  case $option in
-    1) downmanage ;;
-    2) showvpn ;;
-    3) showftporr ;;
-    *) echo " \"$option\" is not a valid option"; sleep 1 ;;
-  esac
+showlogo
+echo -e " ${b}[ R00T MENU ]${enda}"
+echo -e "Make A Choice
+        1)    Text Editors
+        2)    FTP/Torrent Applications
+        3)    Download Managers
+        4)    Network managers
+        5)    VPN clients
+        6)    Chat Applications
+        7)    Image Editors
+        8)    Video editors/Record
+        9)    Archive Handlers
+       10)    Audio Applications
+       11)    Other Applications
+       12)    Development Environments
+       13)    Browser/Web Plugins
+       14)    Dotfiles
+       15)    Usefull Links
+      ------------------------
+        a)    About Manjaro Setup
+        q)    Leave Manjaro Setup"
+echo
+echo -en " Choose An Option: "
+read option
+case $option in
+1) showtext ;;
+2) showftptorr ;;
+3) downmanage ;;
+4) netmanage ;;
+5) showvpn ;;
+6) showchat ;;
+7) showimg ;;
+8) showvid ;;
+9) showarch ;;
+10) showaudio ;;
+11) showothapps ;;
+12) showdevapps ;;
+13) showwebapps ;;
+14) archconfigs ;;
+15) showlinks ;;
+a) showabout ;;
+q) archioexit ;;
+*) echo " \"$option\" Is Not A Valid Option"; sleep 1 ;;
+
+esac
 
 # Show About
 function showabout {
