@@ -168,6 +168,20 @@ archicheck && initpacmanupd && clear && installManjaroSetup && sleep 1
 #         Second Component - Package Installers          #
 ##########################################################
 
+# Install Wifi Menu
+function installwifimenu {
+  echo -e " Preparing To Install ${b}wifi-menu${enda}" && echo
+  echo -e " ${bu}wifi-menu is a service for connecting to the wifi points
+  using wpa_supplicant."
+  echo && echo -en " ${y}Press Enter To Continue${endc}"
+  read input
+  echo -e " Installing ${b}wifi-menu${enda}"
+  pacman -S --noconfirm wifi-menu dialog wpa_supplicant
+  echo -e " ${b}wifi-menu${enda} Was Successfully Installed"
+  echo && echo -en " ${y}Press Enter To Return To Menu${endc}"
+  read input
+}
+
 # Install Okular
 function installokular {
   echo
@@ -1029,50 +1043,34 @@ function installvirtualbox {
 #               Third Component - The Menus              #
 ##########################################################
 
-# Menu for download managers
-function downmanage {
+# Menu for Text Editors
+function showtext {
   showlogo
-  echo -e " ${b}[ Download Managers ]${enda}"
+  echo -e " ${b}[ Text Editors ]${enda}"
   echo -e "Make a choice:
-              1. gwget
-              2. kget
-              3. uget
-              ----------------------
-              q. Return to ROOT Menu"
-  echo -en " Choose an option: "
-  read option
-  case $option in
-    1) installgwget ;;
-    2) installkget ;;
-    3) installuget ;;
-    q) sleep 1 ;;
-    *) echo " \"$option\" is not a valid option"; sleep 1; downmanage ;;
-  esac
-}
-
-# Menu for VPN Clients
-function showvpn {
-  showlogo
-  echo -e "${b}[ VPN Clients ]${enda}"
-  echo -e "Make a choice:
-            1. OpenConnect
-            2. PPTP Client
+            1. GEdit
+            2. Geany
+            3. Emacs
+            4. VIM
+            5. Kate
             ----------------------
             q. Return to ROOT Menu"
   echo -en " Choose an option: "
   read option
   case $option in
-    1) installopenconnect ;;
-    2) installpptpclient ;;
+    1) installgedit ;;
+    2) installgeany ;;
+    3) installemacs ;;
+    4) installvim ;;
+    5) installkate ;;
     q) sleep 1 ;;
-    *) echo " \"$option\" is not a valid option"; sleep 1; showvpn ;;
-  esac
+    *) echo " \"$option\" Is Not a Valid Option"; sleep 1; downmanage ;;
 }
 
 # Menu for FTP/Torrent Applications
 function showftptorr {
   showlogo
-  echo -e " ${b}[ ]${enda}"
+  echo -e " ${b}[ FTP/Torrent Apps ]${enda}"
   echo -e "Make a choice:
             1. FileZilla (FTP)
             2. gFTP (FTP)
@@ -1094,25 +1092,247 @@ function showftptorr {
   esac
 }
 
-# Menu for Chat Applications
-
-# Menu for Image Editors
-
-# Menu for Archive Handlers
-
-# Menu for Text Editors
-
-# Menu for Web Applications
-
-# Menu for Development Environments
-
-# Menu for Browser Links
-
-# Menu for Dotfiles
-
-# Menu for Rando Applications
+# Menu for download managers
+function downmanage {
+  showlogo
+  echo -e " ${b}[ Download Managers ]${enda}"
+  echo -e "Make a choice:
+              1. gwget
+              2. kget
+              3. uget
+              ----------------------
+              q. Return to ROOT Menu"
+  echo -en " Choose an option: "
+  read option
+  case $option in
+    1) installgwget ;;
+    2) installkget ;;
+    3) installuget ;;
+    q) sleep 1 ;;
+    *) echo " \"$option\" is not a valid option"; sleep 1; downmanage ;;
+  esac
+}
 
 # Menu for Network Managers
+function netmanage {
+  showlogo
+  echo -e " ${b}[ Network Managers ]${enda}"
+  echo -e "Make a choice:
+            1. Connman
+            2. netctl
+            3. NetworkManager
+            4. Wifi-Menu
+            5. systemd-networkd
+            6. Wicd
+            ----------------------
+            q. Return to ROOT Menu"
+  echo -en " Choose an option: "
+  read option
+  case $option in
+    1) installconnman ;;
+    2) installnetctlr ;;
+    3) installnetworkmanager ;;
+    4) installwifimenu ;;
+    5) installsystemnet ;;
+    6) installwicd ;;
+    q) sleep 1 ;;
+    *) echo " \"$option\" Is Not a Valid Option"; sleep 1; downmanage ;;
+}
+
+# Menu for VPN Clients
+function showvpn {
+  showlogo
+  echo -e "${b}[ VPN Clients ]${enda}"
+  echo -e "Make a choice:
+            1. OpenConnect
+            2. PPTP Client
+            ----------------------
+            q. Return to ROOT Menu"
+  echo -en " Choose an option: "
+  read option
+  case $option in
+    1) installopenconnect ;;
+    2) installpptpclient ;;
+    q) sleep 1 ;;
+    *) echo " \"$option\" is not a valid option"; sleep 1; showvpn ;;
+  esac
+}
+
+# Menu for Chat Applications
+function showchat {
+  showlogo
+  echo -e " ${b}[ Chat Applications ]${enda}"
+  echo -e "Make a choice:
+            1. Kmail
+            2. HexChat
+            3. Quassel
+            4. Geany Mail
+            ----------------------
+            q. Return to ROOT Menu"
+  echo -en " Choose an option: "
+  read option
+  case $option in
+    1) installkmail ;;
+    2) installhexchat ;;
+    3) installquassel ;;
+    4) installgeany ;;
+    q) sleep 1 ;;
+    *) echo " \"$option\" Is Not a Valid Option"; sleep 1; downmanage ;;
+}
+# Menu for Archive Handlers
+function showarch {
+  showlogo
+  echo -e " ${b}[ Archive Handlers ]${enda}"
+  echo -e "Make a choice:
+            1. Ark (for KDE)
+            2. File-Roller (for GNOME)
+            3. Zip/Unzip
+            4. Rar/Unrar
+            ----------------------
+            q. Return to ROOT Menu"
+  echo -en " Choose an option: "
+  read option
+  case $option in
+    1) installark ;;
+    2) installfileroller ;;
+    3) installzipunzip ;;
+    4) installrarunrar ;;
+    q) sleep 1 ;;
+    *) echo " \"$option\" Is Not a Valid Option"; sleep 1; downmanage ;;
+}
+
+# Menu for Audio Applications
+function showaudio {
+  showlogo
+  echo -e " ${b}[ Audio Applications ]${enda}"
+  echo -e "Make a choice:
+            1. VLC
+            ----------------------
+            q. Return to ROOT Menu"
+  echo -en " Choose an option: "
+  read option
+  case $option in
+    1) installvlc ;;
+    q) sleep 1 ;;
+    *) echo " \"$option\" Is Not a Valid Option"; sleep 1; downmanage ;;
+}
+
+# Menu for Rando Applications
+function showothapps {
+  showlogo
+  echo -e " ${b}[ Rando Applications ]${enda}"
+  echo -e "Make a choice:
+            1. Skype
+            2. TeamViewer
+            3. Gnome Tweak Tool
+            4. Terminator
+            5. Discord
+            6. Liferea
+            7. Docky
+            8. Steam
+            9. Foxit Reader
+            10. LibreOffice
+            11. HardInfo
+            12. GParted
+            13. VirtualBox
+            14. Okular
+            ----------------------
+            q. Return to ROOT Menu"
+  echo -en " Choose an option: "
+  read option
+  case $option in
+    1) installskype ;;
+    2) installteamviewer ;;
+    3) installgnometweaktool ;;
+    4) installterminator ;;
+    5) installdiscord ;;
+    6) installliferea ;;
+    7) installdocky ;;
+    8) installsteam ;;
+    9) installfoxitreader ;;
+    10) installlibreoffice ;;
+    11) installhardinfo ;;
+    12) installgparted ;;
+    13) installvirtualbox ;;
+    14) installokular ;;
+    q) sleep 1 ;;
+    *) echo " \"$option\" Is Not a Valid Option"; sleep 1; downmanage ;;
+}
+
+# Menu for IDEs
+function showdevapps {
+  showlogo
+  echo -e " ${b}[ Development Environments ]${enda}"
+  echo -e "Make a choice:
+            1. Bluefish
+            2. Brackets
+            3. Cloud9
+            4. IntelliJ
+            5. Netbeans
+            6. Ninja-IDE
+            7. Sublime Text 2
+            8. VS Code
+            9. Atom Editor
+            ----------------------
+            q. Return to ROOT Menu"
+  echo -en " Choose an option: "
+  read option
+  case $option in
+    1) installbluefish ;;
+    2) installbrackets ;;
+    3) installcloud9 ;;
+    4) installintellij ;;
+    5) installnetbeans ;;
+    6) installninja ;;
+    7) installsublime ;;
+    8) installvisualstudiocode ;;
+    9) installatom ;;
+    q) sleep 1 ;;
+    *) echo " \"$option\" Is Not a Valid Option"; sleep 1; downmanage ;;
+}
+
+# Menu for Web Applications
+function showwebapps {
+  showlogo
+  echo -e " ${b}[ Web Applications ]${enda}"
+  echo -e "Make a choice:
+            1. Chromium
+            2. Chrome
+            3. Firefox
+            4. Youtube Downloader (Terminal)
+            5. Youtube Downloader (GUI)
+            ----------------------
+            q. Return to ROOT Menu"
+  echo -en " Choose an option: "
+  read option
+  case $option in
+    1) installchromium ;;
+    2) installchromium ;;
+    3) installfirefox ;;
+    4) installytbdwn ;;
+    5) installytgui ;;
+    q) sleep 1 ;;
+    *) echo " \"$option\" Is Not a Valid Option"; sleep 1; downmanage ;;
+}
+
+# Menu for Dotfiles
+function showdotfiles {
+  showlogo
+  echo -e "${b}[ Dotfiles ]${enda}"
+  echo -e " Windelicato: ${bu}https://github.com/windelicato/dotfiles${endc}"
+  echo -e " Jieverson: ${bu}https://github.com/jieverson/dotfiles${endc}"
+  echo -e " Brianclemens: ${bu}https://github.com/brianclemens/dotfiles${endc}"
+  echo -e " Probandula: ${bu}https://github.com/probandula/arch-dotfiles${endc}"
+  echo -e " MORE.. : ${bu}https://github.com/bamos/dotfiles#similar-projects-and-inspiration${endc}"
+}
+
+# Menu for Browser Links
+function showlinks {
+  echo -e "${b}[ Useful Links ]${enda}"
+  echo -e " PaperTurkey's GitHub: ${bu}https://github.com/paperTurkey${endc}"
+  echo -e " Manjaro Linux Wiki: ${bu}https://wiki.manjaro.org/${endc}"
+  echo -e " Manjaro User Guide: ${bu}https://manjaro.org/support/userguide/${endc}"
+}
 
 # Infinite Loop to Show Menu Until Exit
 
@@ -1127,15 +1347,13 @@ echo -e "Make A Choice
         4)    Network managers
         5)    VPN clients
         6)    Chat Applications
-        7)    Image Editors
-        8)    Video editors/Record
         9)    Archive Handlers
        10)    Audio Applications
        11)    Other Applications
        12)    Development Environments
        13)    Browser/Web Plugins
        14)    Dotfiles
-       15)    Usefull Links
+       15)    Web Links
       ------------------------
         a)    About Manjaro Setup
         q)    Leave Manjaro Setup"
@@ -1156,7 +1374,7 @@ echo -e "Make A Choice
           11) showothapps ;;
           12) showdevapps ;;
           13) showwebapps ;;
-          14) archconfigs ;;
+          14) showdotfiles ;;
           15) showlinks ;;
           a) showabout ;;
           q) manjarosetupexit ;;
