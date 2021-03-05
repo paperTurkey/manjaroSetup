@@ -1314,7 +1314,7 @@ function showwebapps {
   read option
   case $option in
     1) installchromium ;;
-    2) installchromium ;;
+    2) installchrome ;;
     3) installfirefox ;;
     4) installytbdwn ;;
     5) installytgui ;;
