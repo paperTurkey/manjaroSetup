@@ -1332,6 +1332,10 @@ function showdotfiles {
   echo -e " Brianclemens: ${bu}https://github.com/brianclemens/dotfiles${endc}"
   echo -e " Probandula: ${bu}https://github.com/probandula/arch-dotfiles${endc}"
   echo -e " MORE.. : ${bu}https://github.com/bamos/dotfiles#similar-projects-and-inspiration${endc}"
+
+
+
+  read input
 }
 
 # Menu for Browser Links
@@ -1340,6 +1344,10 @@ function showlinks {
   echo -e " PaperTurkey's GitHub: ${bu}https://github.com/paperTurkey${endc}"
   echo -e " Manjaro Linux Wiki: ${bu}https://wiki.manjaro.org/${endc}"
   echo -e " Manjaro User Guide: ${bu}https://manjaro.org/support/userguide/${endc}"
+
+
+
+  read input
 }
 
 # Infinite Loop to Show Menu Until Exit
