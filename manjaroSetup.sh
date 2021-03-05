@@ -1132,28 +1132,28 @@ echo -e "Make A Choice
       ------------------------
         a)    About Manjaro Setup
         q)    Leave Manjaro Setup"
-echo
-echo -en " Choose An Option: "
-read option
-case $option in
-1) showtext ;;
-2) showftptorr ;;
-3) downmanage ;;
-4) netmanage ;;
-5) showvpn ;;
-6) showchat ;;
-7) showimg ;;
-8) showvid ;;
-9) showarch ;;
-10) showaudio ;;
-11) showothapps ;;
-12) showdevapps ;;
-13) showwebapps ;;
-14) archconfigs ;;
-15) showlinks ;;
-a) showabout ;;
-q) archioexit ;;
-*) echo " \"$option\" Is Not A Valid Option"; sleep 1 ;;
+        echo
+        echo -en " Choose An Option: "
+        read option
+        case $option in
+          1) showtext ;;
+          2) showftptorr ;;
+          3) downmanage ;;
+          4) netmanage ;;
+          5) showvpn ;;
+          6) showchat ;;
+          7) showimg ;;
+          8) showvid ;;
+          9) showarch ;;
+          10) showaudio ;;
+          11) showothapps ;;
+          12) showdevapps ;;
+          13) showwebapps ;;
+          14) archconfigs ;;
+          15) showlinks ;;
+          a) showabout ;;
+          q) archioexit ;;
+          *) echo " \"$option\" Is Not A Valid Option"; sleep 1 ;;
 
 esac
 
