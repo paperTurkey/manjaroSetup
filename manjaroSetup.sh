@@ -158,10 +158,8 @@ showlogo && echo -e " ${y} Preparing to Run ${b}MajaroSetup${endc}"
 archicheck && initpacmanupd && clear && installManjaroSetup && sleep 1
 
 ##########################################################
-#                      Second Component                  #
+#         Second Component - Package Installers          #
 ##########################################################
-
-# Package Installations
 
 # Install Okular
 function installokular {
@@ -673,6 +671,353 @@ function installqbittorrent {
   read input
 }
 
+# Install Kmail
+function installkmail {
+  echo
+  echo -e " Currently installing ${b}Kmail${enda}"
+  echo -e "${bu}Kmail is a mail client that supports folders, filtering, viewing HTML mail, and international character sets."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}Kmail${endc}"
+  pacman -S --noconfirm kmail
+  echo && echo -e "${b}Kmail${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install Hexchat
+function installhexchat {
+  echo
+  echo -e " Currently installing ${b}HexChat${enda}"
+  echo -e "${bu}HexChat is an open-source IRC client based on XChat."
+  echo && echo -en " ${y}Press enter to continue...${endc}"echo
+  read input
+  echo -e " Installing ${b}HexChat${endc}"
+  pacman -S --noconfirm hexchat
+  echo && echo -e "${b}${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install Quassel
+function installquassel {
+  echo
+  echo -e " Currently installing ${b}Quassel${enda}"
+  echo -e "${bu}Quassel is a cross-platform IRC client introduced in 2008. "
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}Quassel${endc}"
+  pacman -S --noconfirm quassel-core quassel-client quassel-monolithic
+  echo && echo -e "${b}Quassel${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install Discord
+function installdiscord {
+  echo
+  echo -e " Currently installing ${b}Discord${enda}"
+  echo -e "${bu}Discord is a all-in-one voice and text chat client."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}Discord${endc}"
+  yay -S discord
+  echo && echo -e "${b}Discord${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install FFmpeg
+function installffmpeg {
+  echo
+  echo -e " Currently installing ${b}FFmpeg${enda}"
+  echo -e "${bu}FFmpeg is a cross-platform solution to record, convert and stream audio and video."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}FFmpeg${endc}"
+  pacman -S --noconfirm ffmpeg
+  echo && echo -e "${b}FFmpeg${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install Liferea
+function installliferea {
+  echo
+  echo -e " Currently installing ${b}Liferea${enda}"
+  echo -e "${bu}Liferea is a Linux Feed Reader."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}Liferea${endc}"
+  pacman -S --noconfirm liferea
+  echo && echo -e "${b}Liferea${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install VIM
+function installvim {
+  echo
+  echo -e " Currently installing ${b}VIM${enda}"
+  echo -e "${bu}VIM is an improved and highly configurable GUI version of the text editor."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}${endc}"
+  pacman -S --noconfirm gvim
+  echo && echo -e "${b}VIM${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install Kate
+function installkate {
+  echo
+  echo -e " Currently installing ${b}Kate${enda}"
+  echo -e "${bu}Kate is short for KDE Advanced Text Editor."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}Kate${endc}"
+  pacman -S --noconfirm kate
+  echo && echo -e "${b}Kate${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install Atom
+function installatom {
+  echo
+  echo -e " Currently installing ${b}Atom${enda}"
+  echo -e "${bu}Atom is an open-source text editor developed by GitHub."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}Atom${endc}"
+  yay -S atom
+  echo && echo -e "${b}Atom${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install Bluefish
+function installbluefish {
+  echo
+  echo -e " Currently installing ${b}Bluefish${enda}"
+  echo -e "${bu}Bluefish is a GTK+ editor/IDE with an MDI interface and syntax highlighting."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}Bluefish${endc}"
+  pacman -S --noconfirm bluefish
+  echo && echo -e "${b}Bluefish${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install Brackets
+function installbrackets {
+  echo
+  echo -e " Currently installing ${b}Brackets${enda}"
+  echo -e "${bu}Brackets is an open-source editor written in HTML, CSS, and Javascript with a primary focus on Web Development."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}Brackets${endc}"
+  yay -S brackets
+  echo && echo -e "${b}Brackets${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install Cloud9
+function installcloud9 {
+  echo
+  echo -e " Currently installing ${b}Cloud9${enda}"
+  echo -e "${bu}Cloud9 is a state-of-the-art IDE that runs in the browser and lives in the cloud, allowing you to run, debug, and deploy apps from anywhere."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}Cloud9${endc}"
+  yay -S c9.core
+  echo && echo -e "${b}Cloud9${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install IntelliJIDEA
+function installintellij {
+  echo
+  echo -e " Currently installing ${b}IntelliJ IDEA${enda}"
+  echo -e "${bu}IntelliJ is an IDE for Java, Groovy, and other programming languages with advanced refactoring features."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}IntelliJ${endc}"
+  pacman -S --noconfirm intellij-idea-community-edition
+  echo && echo -e "${b}IntelliJ${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install Netbeans
+function installnetbeans {
+  echo
+  echo -e " Currently installing ${b}Netbeans${enda}"
+  echo -e "${bu}Netbeans is an IDE for developing Java, JS, PHP, Python, Ruby, etc."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}Netbeans${endc}"
+  pacman -S --noconfirm netbeans
+  echo && echo -e "${b}Netbeans${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install Ninja-IDE
+function installninja {
+  echo
+  echo -e " Currently installing ${b}Ninja-IDE${enda}"
+  echo -e "${bu}Ninja-IDE is a cross-platform IDE."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}Ninja-IDE${endc}"
+  pacman -S --noconfirm ninja-ide
+  echo && echo -e "${b}Ninja-IDE${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install Sublime Text
+function installsublime {
+  echo
+  echo -e " Currently installing ${b}Sublime Text 2${enda}"
+  echo -e "${bu}Sublime Text 2 is a closed-source C++ and Python-based editor."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}Sublime Text 2${endc}"
+  pacman -S --noconfirm sublime-text sublime-text-dev
+  echo && echo -e "${b}Sublime Text 2${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install Visual Studio Code
+function installvisualstudiocode {
+  echo
+  echo -e " Currently installing ${b}Visual Studio Code${enda}"
+  echo -e "${bu}Visual Studio Code is an editor for building and debugging modern web and cloud applications."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}VS Code${endc}"
+  pacman -S --noconfirm code
+  echo && echo -e "${b}${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install Docky
+function installdocky {
+  echo
+  echo -e " Currently installing ${b}Docky${enda}"
+  echo -e "${bu}Docky is an advanced shortcut bar that sits at the edge of your screen."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}Docky${endc}"
+  pacman -S --noconfirm docky
+  echo && echo -e "${b}Docky${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install Steam
+function installsteam {
+  echo
+  echo -e " Currently installing ${b}Steam${enda}"
+  echo -e "${bu}Steam is a digital distribution platform developed by Valve Corporation."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}Steam${endc}"
+  pacman -S --noconfirm steam
+  echo && echo -e "${b}Steam${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install Foxit Reader
+function installfoxitreader {
+  echo
+  echo -e " Currently installing ${b}Foxit Reader${enda}"
+  echo -e "${bu}Foxit Reader is a PDF file reader with a lot of features."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}Foxit Reader${endc}"
+  yay -S foxitreader
+  echo && echo -e "${b}Foxit Reader${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install Libre Office
+function installlibreoffice {
+  echo
+  echo -e " Currently installing ${b}Libre Office${enda}"
+  echo -e "${bu}Libre Office is a open-source software office suite."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}Libre Office${endc}"
+  pacman -S --noconfirm libreoffice-fresh
+  echo && echo -e "${b}Libre Office${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install HardInfo
+function installhardinfo {
+  echo
+  echo -e " Currently installing ${b}HardInfo${enda}"
+  echo -e "${bu}HardInfo is an app that provides information about your system hardware."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}HardInfo${endc}"
+  pacman -S --noconfirm hardinfo
+  echo && echo -e "${b}HardInfo${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+# Install Virtual Box
+function installvirtualbox {
+  echo
+  echo -e " Currently installing ${b}Virtual Box${enda}"
+  echo -e "${bu}Virtual Box is a free and open-source hypervisor."
+  echo && echo -en " ${y}Press enter to continue...${endc}"
+  read input
+  echo -e " Installing ${b}Virtual Box${endc}"
+  pacman -S --noconfirm virtualbox qt4
+  echo && echo -e "${b}${enda} was successfully installed."
+  echo -en " ${y}Press Enter to return to menu${endc}"
+  echo
+  read input
+}
+
+
+
 ##########################################################
 #                      Third Component                   #
 ##########################################################
@@ -707,7 +1052,7 @@ function showvpn {
             2. PPTP Client
             ----------------------
             q. Return to ROOT Menu"
-  echosleepecho -en " Choose an option: "
+  echo -en " Choose an option: "
   read option
   case $option in
     1) installopenconnect ;;
@@ -718,7 +1063,28 @@ function showvpn {
 }
 
 # Menu for FTP/Torrent Applications
-
+function showftptorr {
+  showlogo
+  echo -e " ${b}[ ]${enda}"
+  echo -e "Make a choice:
+            1. FileZilla (FTP)
+            2. gFTP (FTP)
+            3. Curl ftpFS (FTP)
+            4. qBittorrent (Torrent)
+            5. Transmission (Torrent)
+            ----------------------
+            q. Return to ROOT Menu"
+  echo -en " Choose an option: "
+  read option
+  case $option in
+    1) installfilez ;;
+    2) installgftp ;;
+    3) installcurlftpfs ;;
+    4) installqbittorrent ;;
+    5) installtransmission ;;
+    q) sleep 1 ;;
+    *) echo " \"$option\" Is Not a Valid Option"; sleep 1; downmanage ;;
+}
 # Menu for Chat Applications
 
 # Menu for Image Editors
