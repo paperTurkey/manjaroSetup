@@ -1334,19 +1334,20 @@ function showdotfiles {
   echo -e " MORE.. : ${bu}https://github.com/bamos/dotfiles#similar-projects-and-inspiration${endc}"
 
 
-
+  echo && echo -en " ${yellow}Press Enter to Return to ROOT Menu${endc}"
   read input
 }
 
 # Menu for Browser Links
 function showlinks {
+  showlogo
   echo -e "${b}[ Useful Links ]${enda}"
   echo -e " PaperTurkey's GitHub: ${bu}https://github.com/paperTurkey${endc}"
   echo -e " Manjaro Linux Wiki: ${bu}https://wiki.manjaro.org/${endc}"
   echo -e " Manjaro User Guide: ${bu}https://manjaro.org/support/userguide/${endc}"
 
 
-
+  echo && echo -en " ${yellow}Press Enter to Return to ROOT Menu${endc}"
   read input
 }
 
