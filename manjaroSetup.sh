@@ -1019,7 +1019,7 @@ function installvirtualbox {
 
 
 ##########################################################
-#                      Third Component                   #
+#               Third Component - The Menus              #
 ##########################################################
 
 # Menu for download managers
@@ -1112,7 +1112,7 @@ function showftptorr {
 while :
 do
 showlogo
-echo -e " ${b}[ R00T MENU ]${enda}"
+echo -e " ${b}[ R00T Menu ]${enda}"
 echo -e "Make A Choice
         1)    Text Editors
         2)    FTP/Torrent Applications
@@ -1157,6 +1157,10 @@ echo -e "Make A Choice
 
 esac
 
+##########################################################
+#               Fourth Component - The Credits           #
+##########################################################
+
 # Show About
 function showabout {
   clear
@@ -1171,6 +1175,8 @@ function showabout {
   #  -- https://github.com/SofianeHamlaoui/ArchI0          #
   ##########################################################
   "
+  echo && echo -en " ${yellow}Press Enter to Return to ROOT Menu${endc}"
+  read input
 }
 
 # Exit ManjaroSetup
