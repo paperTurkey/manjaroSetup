@@ -1116,16 +1116,6 @@ do
             1. Download Managers
             2. VPN Clients
             3. FTP Torrent Applications
-            4. Chat Applications
-            5. Image Editors
-            6. Archive Handlers
-            7. Text Editors
-            8. Web Applications
-            9. Development Environments
-            10. Network Managers
-            11. Rando Applications
-            12. Browser Links
-            13. Dotfiles
             ---------------------------
             a. About ManjaroSetup
             q. Leave ManjaroSetup"
@@ -1135,18 +1125,6 @@ do
     1) downmanage ;;
     2) showvpn ;;
     3) showftporr ;;
-    4) showchat ;;
-    5) showimg ;;
-    6) showarch ;;
-    7) showtext ;;
-    8) showwebapps ;;
-    9) showdevenvs ;;
-    10) netmanage ;;
-    11) showrandoapps ;;
-    12) showlinks ;;
-    13) showdotfiles ;;
-    a) showabout ;;
-    q) manjarosetupexit ;;
     *) echo " \"$option\" is not a valid option"; sleep 1 ;;
   esac
 
