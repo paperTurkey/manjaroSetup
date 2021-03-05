@@ -1152,7 +1152,7 @@ echo -e "Make A Choice
           14) archconfigs ;;
           15) showlinks ;;
           a) showabout ;;
-          q) archioexit ;;
+          q) manjarosetupexit ;;
           *) echo " \"$option\" Is Not A Valid Option"; sleep 1 ;;
 
 esac
