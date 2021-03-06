@@ -89,14 +89,14 @@ function showlogo {
 function checkroot {
   showlogo && sleep 1
   if [[ $(id -u) = 0 ]]; then
-    echo -e " Checking for ROOT: ${g}PASSED${endc}"
-  else
-    echo -e " Checking for ROOT: ${r}FAILED${endc}
-    ${y}This Setup Script Needs To Run As ROOT${endc}"
+    echo -e " Checking for ROOT: ${r}ACTIVE${endc}
+    ${y}Majaro Setup needs to run as you. Try it without ROOT.${endc}"
     echo -e " ${b}ManjaroSetup.sh${enda} Will Now Exit"
     echo
     sleep 1
     exit
+  else
+    echo -e " Checking for ROOT: ${g}INACTIVE${endc}"
   fi
 }
 
@@ -105,7 +105,7 @@ function initpacmanupd {
   echo ""
   echo; echo -e "\033[1m Updating ..... \e[0m\E[31m| Please stop any install process before updating\e[0m";
   echo
-  pacman -Syu --noconfirm;
+  sudo pacman -Syu --noconfirm;
   echo "Update Finished";
   sleep 1;
 }
@@ -137,7 +137,7 @@ function checkgit {
     echo [x]::[warning]:this script require Git ;
     echo ""
     echo [!]::[please wait]: Installing Git ..  ;
-    pacman -S git --noconfirm
+    sudo pacman -S git --noconfirm
     echo ""
   fi
 sleep 1
@@ -151,7 +151,7 @@ function checkwget {
     echo [x]::[warning]:this script require wget ;
     echo ""
     echo [!]::[please wait]: Installing Wget ;
-    pacman -S --noconfirm wget
+    sudo pacman -S --noconfirm wget
     echosleep 2
     echo ""
   fi
@@ -176,7 +176,7 @@ function installwifimenu {
   echo && echo -en " ${y}Press Enter To Continue${endc}"
   read input
   echo -e " Installing ${b}wifi-menu${enda}"
-  pacman -S --noconfirm wifi-menu dialog wpa_supplicant
+  sudo pacman -S --noconfirm wifi-menu dialog wpa_supplicant
   echo -e " ${b}wifi-menu${enda} Was Successfully Installed"
   echo && echo -en " ${y}Press Enter To Return To Menu${endc}"
   read input
@@ -190,7 +190,7 @@ function installokular {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}Okular${endc}"
-  pacman -S okular --noconfirm
+  sudo pacman -S okular --noconfirm
   echo && echo -e "${b}Okular${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
   echo
@@ -205,7 +205,7 @@ function installgparted {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}GParted${endc}"
-  pacman -S gparted --noconfirm
+  sudo pacman -S gparted --noconfirm
   echo && echo -e "${b}GParted${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
   echo
@@ -220,7 +220,7 @@ function installemacs {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}Emacs${endc}"
-  pacman -S --noconfirm emacs
+  sudo pacman -S --noconfirm emacs
   echo && echo -e "${b}Emacs${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
   echo
@@ -235,7 +235,7 @@ function installgedit {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}GEdit${endc}"
-  pacman -S --noconfirm gedit
+  sudo pacman -S --noconfirm gedit
   echo && echo -e "${b}GEdit${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
   echo
@@ -250,7 +250,7 @@ function installgeany {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}Geany${endc}"
-  pacman -S --noconfirm geany
+  sudo pacman -S --noconfirm geany
   echo && echo -e "${b}Geany${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
   echo
@@ -265,7 +265,7 @@ function installfilez {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}FileZilla${endc}"
-  pacman -S --noconfirm filezilla
+  sudo pacman -S --noconfirm filezilla
   echo && echo -e "${b}FileZilla${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
   echo
@@ -280,7 +280,7 @@ function installgftp {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}gFTP${endc}"
-  pacman -S --noconfirm gftp
+  sudo pacman -S --noconfirm gftp
   echo && echo -e "${b}gFTP${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
   echo
@@ -295,7 +295,7 @@ function installtransmission {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}Transmission${endc}"
-  pacman -S --noconfirm transmission-qt
+  sudo pacman -S --noconfirm transmission-qt
   echo && echo -e "${b}Transmission${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
   echo
@@ -310,7 +310,7 @@ function installark {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}Ark${endc}"
-  pacman -S --noconfirm ark
+  sudo pacman -S --noconfirm ark
   echo && echo -e "${b}Ark${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
   echo
@@ -325,7 +325,7 @@ function installfileroller {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}File-Roller${endc}"
-  pacman -S --noconfirm file-roller
+  sudo pacman -S --noconfirm file-roller
   echo && echo -e "${b}File-Roller${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
   echo
@@ -340,7 +340,7 @@ function installzipunzip {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}Zip/Unzip${endc}"
-  pacman -S --noconfirm unzip
+  sudo pacman -S --noconfirm unzip
   echo && echo -e "${b}Zip/Unzip${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
   echo
@@ -355,7 +355,7 @@ function installrarunrar {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}Rar/Unrar${endc}"
-  pacman -S --noconfirm rar unrar
+  sudo pacman -S --noconfirm rar unrar
   echo && echo -e "${b}Rar/Unrar${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
   echo
@@ -370,7 +370,7 @@ function installchromium {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}Chromium${endc}"
-  pacman -S --noconfirm chromium
+  sudo pacman -S --noconfirm chromium
   echo && echo -e "${b}Chromium${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
   echo
@@ -385,6 +385,8 @@ function installchrome {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}Chrome${endc}"
+  su $USER
+  echo -e "Yay requires you to be... you..."
   yay -S google-chrome
   echo && echo -e "${b}${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
@@ -400,7 +402,7 @@ function installytbdwn {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}Youtube Downloader${endc}"
-  pacman -S --noconfirm youtube-dl
+  sudo pacman -S --noconfirm youtube-dl
   echo && echo -e "${b}Youtube Downloader${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
   echo
@@ -415,7 +417,7 @@ function installconnman {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}Connman${endc}"
-  pacman -S --noconfirm connman
+  sudo pacman -S --noconfirm connman
   echo && echo -e "${b}Connman${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
   echo
@@ -460,7 +462,7 @@ function installterminator {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}Terminator${endc}"
-  pacman -S --noconfirm terminator
+  sudo pacman -S --noconfirm terminator
   echo && echo -e "${b}Terminator${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
   echo
@@ -475,7 +477,7 @@ function installgnometweaktool {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}Gnome Tweak Tool${endc}"
-  pacman -S --noconfirm gnome-tweak-tool
+  sudo pacman -S --noconfirm gnome-tweak-tool
   echo && echo -e "${b}Gnome Tweak Tool${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
   echo
@@ -490,7 +492,7 @@ function installnetctlr {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}netctl${endc}"
-  pacman -S --noconfirm netctl
+  sudo pacman -S --noconfirm netctl
   echo && echo -e "${b}${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
   echo
@@ -505,7 +507,7 @@ function installnetworkmanager {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}NetworkManager${endc}"
-  pacman -S --noconfirm networkmanager
+  sudo pacman -S --noconfirm networkmanager
   echo && echo -e "${b}NetworkManager${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
   echo
@@ -520,7 +522,7 @@ function installsystemnet {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}systemd-networkd${endc}"
-  pacman -S --noconfirm systemd
+  sudo pacman -S --noconfirm systemd
   echo && echo -e "${b}systemd-networkd${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
   echo
@@ -535,7 +537,7 @@ function installwicd {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}Wicd${endc}"
-  pacman -S --noconfirm wicd
+  sudo pacman -S --noconfirm wicd
   echo && echo -e "${b}Wicd${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
   echo
@@ -550,7 +552,7 @@ function installopenconnect {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}OpenConnect${endc}"
-  pacman -S --noconfirm openconnect
+  sudo pacman -S --noconfirm openconnect
   echo && echo -e "${b}OpenConnect${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
   echo
@@ -565,7 +567,7 @@ function installpptpclient {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}PPTP Client${endc}"
-  pacman -S --noconfirm pptpclient
+  sudo pacman -S --noconfirm pptpclient
   echo && echo -e "${b}PPTP Client${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
   echo
@@ -580,7 +582,7 @@ function installfirefox {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}Firefox${endc}"
-  pacman -S --noconfirm firefox
+  sudo pacman -S --noconfirm firefox
   echo && echo -e "${b}${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
   echo
@@ -610,7 +612,7 @@ function installvlc {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}VLC${endc}"
-  pacman -S --noconfirm vlc
+  sudo pacman -S --noconfirm vlc
   echo && echo -e "${b}VLC${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
   echo
@@ -625,7 +627,7 @@ function installgwget {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}Gwget${endc}"
-  pacman -S --noconfirm gwget
+  sudo pacman -S --noconfirm gwget
   echo && echo -e "${b}Gwget${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
   echo
@@ -640,7 +642,7 @@ function installkget {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}KGet${endc}"
-  pacman -S --noconfirm kdenetwork-kget
+  sudo pacman -S --noconfirm kdenetwork-kget
   echo && echo -e "${b}KGet${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
   echo
@@ -655,7 +657,7 @@ function installuget {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}uGet${endc}"
-  pacman -S --noconfirm uget
+  sudo pacman -S --noconfirm uget
   echo && echo -e "${b}uGet${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
   echo
@@ -670,7 +672,7 @@ function installcurlftpfs {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}Curl ftpFS${endc}"
-  pacman -S --noconfirm curlftpfs
+  sudo pacman -S --noconfirm curlftpfs
   echo && echo -e "${b}Curl ftpFS${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
   echo
@@ -685,7 +687,7 @@ function installqbittorrent {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}qBittorrent${endc}"
-  pacman -S --noconfirm qbittorrent qbittorrent-nox
+  sudo pacman -S --noconfirm qbittorrent qbittorrent-nox
   echo && echo -e "${b}qBittorrent${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
   echo
@@ -700,7 +702,7 @@ function installkmail {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}Kmail${endc}"
-  pacman -S --noconfirm kmail
+  sudo pacman -S --noconfirm kmail
   echo && echo -e "${b}Kmail${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
   echo
@@ -715,7 +717,7 @@ function installhexchat {
   echo && echo -en " ${y}Press enter to continue...${endc}"echo
   read input
   echo -e " Installing ${b}HexChat${endc}"
-  pacman -S --noconfirm hexchat
+  sudo pacman -S --noconfirm hexchat
   echo && echo -e "${b}${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
   echo
@@ -730,7 +732,7 @@ function installquassel {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}Quassel${endc}"
-  pacman -S --noconfirm quassel-core quassel-client quassel-monolithic
+  sudo pacman -S --noconfirm quassel-core quassel-client quassel-monolithic
   echo && echo -e "${b}Quassel${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
   echo
@@ -760,7 +762,7 @@ function installffmpeg {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}FFmpeg${endc}"
-  pacman -S --noconfirm ffmpeg
+  sudo pacman -S --noconfirm ffmpeg
   echo && echo -e "${b}FFmpeg${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
   echo
@@ -775,7 +777,7 @@ function installliferea {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}Liferea${endc}"
-  pacman -S --noconfirm liferea
+  sudo pacman -S --noconfirm liferea
   echo && echo -e "${b}Liferea${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
   echo
@@ -790,7 +792,7 @@ function installvim {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}${endc}"
-  pacman -S --noconfirm gvim
+  sudo pacman -S --noconfirm gvim
   echo && echo -e "${b}VIM${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
   echo
@@ -805,7 +807,7 @@ function installkate {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}Kate${endc}"
-  pacman -S --noconfirm kate
+  sudo pacman -S --noconfirm kate
   echo && echo -e "${b}Kate${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
   echo
@@ -835,7 +837,7 @@ function installbluefish {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}Bluefish${endc}"
-  pacman -S --noconfirm bluefish
+  sudo pacman -S --noconfirm bluefish
   echo && echo -e "${b}Bluefish${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
   echo
@@ -880,7 +882,7 @@ function installintellij {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}IntelliJ${endc}"
-  pacman -S --noconfirm intellij-idea-community-edition
+  sudo pacman -S --noconfirm intellij-idea-community-edition
   echo && echo -e "${b}IntelliJ${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
   echo
@@ -895,7 +897,7 @@ function installnetbeans {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}Netbeans${endc}"
-  pacman -S --noconfirm netbeans
+  sudo pacman -S --noconfirm netbeans
   echo && echo -e "${b}Netbeans${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
   echo
@@ -910,7 +912,7 @@ function installninja {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}Ninja-IDE${endc}"
-  pacman -S --noconfirm ninja-ide
+  sudo pacman -S --noconfirm ninja-ide
   echo && echo -e "${b}Ninja-IDE${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
   echo
@@ -925,7 +927,7 @@ function installsublime {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}Sublime Text 2${endc}"
-  pacman -S --noconfirm sublime-text sublime-text-dev
+  sudo pacman -S --noconfirm sublime-text sublime-text-dev
   echo && echo -e "${b}Sublime Text 2${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
   echo
@@ -940,7 +942,7 @@ function installvisualstudiocode {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}VS Code${endc}"
-  pacman -S --noconfirm code
+  sudo pacman -S --noconfirm code
   echo && echo -e "${b}${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
   echo
@@ -955,7 +957,7 @@ function installdocky {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}Docky${endc}"
-  pacman -S --noconfirm docky
+  sudo pacman -S --noconfirm docky
   echo && echo -e "${b}Docky${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
   echo
@@ -970,7 +972,7 @@ function installsteam {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}Steam${endc}"
-  pacman -S --noconfirm steam
+  sudo pacman -S --noconfirm steam
   echo && echo -e "${b}Steam${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
   echo
@@ -1000,7 +1002,7 @@ function installlibreoffice {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}Libre Office${endc}"
-  pacman -S --noconfirm libreoffice-fresh
+  sudo pacman -S --noconfirm libreoffice-fresh
   echo && echo -e "${b}Libre Office${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
   echo
@@ -1015,7 +1017,7 @@ function installhardinfo {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}HardInfo${endc}"
-  pacman -S --noconfirm hardinfo
+  sudo pacman -S --noconfirm hardinfo
   echo && echo -e "${b}HardInfo${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
   echo
@@ -1030,7 +1032,7 @@ function installvirtualbox {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}Virtual Box${endc}"
-  pacman -S --noconfirm virtualbox qt4
+  sudo pacman -S --noconfirm virtualbox qt4
   echo && echo -e "${b}${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
   echo
