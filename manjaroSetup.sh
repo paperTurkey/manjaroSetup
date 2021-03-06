@@ -1030,7 +1030,7 @@ function installvirtualbox {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}Virtual Box${endc}"
-  sudo pacman -S --noconfirm virtualbox qt4
+  sudo pacman -S --noconfirm virtualbox
   echo && echo -e "${b}${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
   echo
