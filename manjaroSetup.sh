@@ -385,8 +385,6 @@ function installchrome {
   echo && echo -en " ${y}Press enter to continue...${endc}"
   read input
   echo -e " Installing ${b}Chrome${endc}"
-  su $USER
-  echo -e "Yay requires you to be... you..."
   yay -S google-chrome
   echo && echo -e "${b}${enda} was successfully installed."
   echo -en " ${y}Press Enter to return to menu${endc}"
